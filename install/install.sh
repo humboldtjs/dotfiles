@@ -134,6 +134,6 @@ echo ""
 
 echo "Opening background apps"
 echo "-----------------------"
-open ~/Applications/Dropbox.app
+open /Applications/Dropbox.app
 echo ""
 
