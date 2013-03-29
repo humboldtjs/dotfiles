@@ -138,6 +138,8 @@ rm -Rf /Applications/plugin-container.app
 rm -Rf /Applications/Prototype\ Droplet.app
 rm -Rf /Applications/Relauncher.app
 rm -Rf /Applications/updater.app
+echo "Reindexing..."
+mdimport /Applications
 echo ""
 
 echo "Installing MAMP"
