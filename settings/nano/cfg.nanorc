@@ -1,0 +1,18 @@
+# ini highlighting
+syntax "cfg" "\.cfg(\.old|~)?$"
+# values
+color brightred "=.*$"
+# equal sign
+color brightcyan "="
+# numbers
+color brightblue "-?[0-9\.]+\s*($|;)"
+# ON/OFF
+#color brightmagenta "ON|OFF|On|Off|on|off\s*($|;)"
+
+# sections
+color green "^\s*\[.*\]"
+
+# keys
+color cyan "^\s*[a-zA-Z0-9_\.\-]+"
+# comments
+color brightyellow ";.*$"

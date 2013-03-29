@@ -1,0 +1,63 @@
+07 Dec 2006
+	initial release
+08 Dec 2006
+	addes: dhcpd.conf, hibernate/common.conf, iplugd in sh.nanorc, initng, mplayerplugin, 
+		nsswitch.conf, sane.d, syslog.conf
+	fixes: modules, mplayer, services
+09 Dec 2006
+	addes: mail/aliases, wifi-radar
+	fixes: info.txt
+10 Dec 2006
+	addes: irssi.conf, proftpd.conf, xinetd*
+14 Dec 2006 
+	addes: /etc/locale, clamd.conf
+	fixes: squid.conf, crontab
+15 Dec 2006
+	addes: ekg (history), .in$, Makefile
+	fixes: changelog
+16 Dec 2006
+	addes: .spec, remake rc stuff, wgetrc 
+	fixes: c (.l highlight), Makefile, /etc/locale
+17 Dec 2006
+	addes: freshclam.conf
+	fixes: smb.conf
+21 Dec 2006
+	addes: configure.log
+	fixes: Makefile
+25 Dec 2006
+	addes: config.status, missing
+27 Dec 2006
+	addes: .vcproj
+28 Dec 2006
+	addes: .glade, .sub, .m4, .guess, configure.ac, config.charset
+	fixes: .in
+29 Dec 2006
+	addes: .am, .xsd, .mak, .texi, .desktop, config.rpath, .lua,
+		.lhtml, .plist, .gcs, .m3u, .m, .kdevelop, .pch, .bat
+	fixes: .in
+30 Dec 2006
+	addes: depcomp, mkinstalldirs, install-sh, AUTHORS, HISTORY, 
+		.idl, .nls, .y, .inf. .dtd, .dcl, Kconfig*
+	fixes: Makefile, default
+01 Jan 2007
+	addes: .la, NEWS
+02 Jan 2007
+	moves: shlike and clike highlighting to the new files not afected by install/emerge
+04 Jul 2007
+	fixes: dhcp.conf, hosts
+05 Jul 2007
+	addes: limits, screenrc, fdprm, securetty, login.defs, my.cnf (mysql), man.conf, sshd_config, protocols
+	fixes: .gg/history
+06 Jul 2007
+	addes: CONTENTS
+22 Feb 2008
+	fixes: apache
+23 Feb 2008
+	addes: postgresql, debian sources
+	fixes: .js (old version still in the js.nanorc file, new used by defaul as it's better for more complex syntaxes)
+	       Makefile (compilation of my and wiki versions)
+	       separate c and c++ as of in LinuxHelp wiki
+31 Mar 2008
+	addes: SoftCam.Key
+02 May 2008
+	addes: havp.config, privoxy config & actionfiles

@@ -1,0 +1,15 @@
+1. place *.nanorc files in /usr/share/nano directory
+2.
+   A - place nanorc in /etc to use it globaly for all users
+   or B - place nanorc as .nanorc for everyuser you intend to use it with
+3. enjoy :)
+4. mail upgraded or additional syntaxes to vojcek@tlen.pl
+
+WARNING: If You do not use Gentoo some syntaxes may show harmless errors during start.
+	Just hashout those lines relating to the Gentoo Disto like gentoo.nanorc
+
+WARNING 2: If You want to place .nanorc files in directory other than /usr/share/nano
+	and use my /etc/nanorc config replace all instances of .nanorc file paths
+	 in that file as they are hardcoded.
+	
+	If anyone knows the more portable solution please drop me e-mail.

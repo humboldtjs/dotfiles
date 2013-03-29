@@ -1,0 +1,21 @@
+# This are installed by default and any changes to them may be gone on the next install
+# sh & c like highlighting we use was gone because of that reason
+# now all that stuff has moved to the new files {shlike,clike}.nanorc
+# hopefully all is restored (VIVA le backups :))
+
+/usr/share/nano/tex.nanorc
+/usr/share/nano/perl.nanorc
+/usr/share/nano/mutt.nanorc
+/usr/share/nano/python.nanorc
+/usr/share/nano/html.nanorc
+/usr/share/nano/ruby.nanorc
+/usr/share/nano/nanorc.nanorc
+/usr/share/nano/java.nanorc
+/usr/share/nano/pov.nanorc
+/usr/share/nano/asm.nanorc
+/usr/share/nano/gentoo.nanorc
+/usr/share/nano/patch.nanorc
+/usr/share/nano/man.nanorc
+/usr/share/nano/groff.nanorc
+/usr/share/nano/c.nanorc
+/usr/share/nano/sh.nanorc

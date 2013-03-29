@@ -1,0 +1,46 @@
+### all *js files  ( e.g. Firefox user.js, prefs.js )
+
+## Old version
+
+#syntax "jsfiles" "(\.|/|)js$"
+#color green "//.*$" start="\/\*" end="\*\/"
+#color blue "'(\\.|[^'])*'"
+#color red ""(\\.|[^\"])*""
+#color brightgreen "\<(true)\>"
+#color brightred "\<(false)\>" "http\:\/\/.*$"
+#color brightmagenta "[0-9](\\.|[^\"])*)"
+
+## New updated taken from http://wiki.linuxhelp.net/index.php/Nano_Syntax_Highlighting
+
+syntax "JavaScript" "\.(js|as|json|jsonp|xmlp)$"
+## Default
+#color white "^.+$"
+## Decimal, cotal and hexadecimal numbers
+color cyan "\<[-+]?([1-9][0-9]*|0[0-7]*|0x[0-9a-fA-F]+)([uU][lL]?|[lL][uU]?)?\>"
+## Floating point number with at least one digit before decimal point
+color cyan "\<[-+]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)([EePp][+-]?[0-9]+)?[fFlL]?"
+color cyan "\<[-+]?([0-9]+[EePp][+-]?[0-9]+)[fFlL]?"
+## Keywords
+color green "\<(public|protected|private|internal)\>"
+color yellow "\<(override)\>"
+color blue "\<(function|var|eval|this|void|push|class|extends)\>"
+color green "\<(break|case|catch|continue|default|delete|do|else|finally)\>"
+color green "\<(for|if|in|instanceof|new|null|return|switch)\>"
+color green "\<(switch|throw|try|typeof|undefined|while|with|package|import|super|window|document)\>"
+## Type specifiers
+color green "\<(Array|Boolean|Date|Enumerator|Error|Function|Math)\>"
+color green "\<(Number|Object|RegExp|String)\>"
+color green "\<(true|false)\>"
+## Brackets
+color blue "[\{\}]"
+color blue "\["
+color blue "\]"
+## String
+color cyan "L?\"(\\"|[^"])*\""
+color cyan "L?'(\'|[^'])*'"
+color green "\"(\\"|[^"])*\":"
+## Escapes
+color red "\\[0-7][0-7]?[0-7]?|\\x[0-9a-fA-F]+|\\[bfnrt'"\?\\]"
+## Comments
+color white start="/\*" end="\*/"
+color white "//.*$"

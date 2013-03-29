@@ -1,0 +1,33 @@
+## found: http://lists.gnu.org/archive/html/help-nano/2006-08/msg00000.html
+## edited by serialhex
+## http://daringfireball.net/projects/markdown/syntax
+syntax "markdown" "\.txt$" "\.text$" "\.md$" "\.markdown$"
+# Quotations
+color cyan "^>.*"
+# Emphasis
+color green "_.*_"
+color green "\*.*\*"
+# Strong emphasis
+color brightgreen "\*\*.*\*\*"
+color brightgreen "__.*__"
+# Underline headers
+color magenta "^====(=*)"
+color magenta "^----(-*)"
+# Hash headers
+color blue "^#.*"
+# Linkified URLs (and inline html tags)
+color magenta start="<" end=">"
+# Links
+color magenta "\[.*\]\(.*\)"
+# Reference-style links
+color magenta "\[.*\]( )?\[.*\]"
+# Link id's:
+color magenta "^\[.*\]:( )+.*"
+# Code spans
+color brightyellow "`.*`"
+# Code blocks
+color brightyellow "^(    ).*"
+# Inline images
+color magenta "!\[.*\]\(.*\)"
+# Reference-style images
+color magenta "!\[.*\]\[.*\]"
