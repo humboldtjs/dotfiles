@@ -163,6 +163,8 @@ echo ""
 
 echo "Setting OSX defaults"
 echo "--------------------"
+# Enable Time Machine on non-supported network shares
+sudo defaults write com.apple.systempreferences TMShowUnsupportedNetworkVolumes 1
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Expand print panel by default
