@@ -27,3 +27,5 @@ fi
 if ! [ -d ~/.cider ]; then
 	ln -s ~/dotfiles/.cider ~/.cider
 fi
+
+cider restore
