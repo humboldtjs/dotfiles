@@ -1,0 +1,23 @@
+{
+    "after-scripts": [
+        "brew linkapps"
+    ],
+    "formulas": [
+        "caskroom/cask/brew-cask",
+        "faac",
+        "ffmpeg",
+        "git",
+        "git-flow",
+        "icdiff",
+        "jq",
+        "lame",
+        "libvpx",
+        "node",
+        "pup",
+        "tag",
+        "wget",
+        "x264",
+        "xvid",
+        "xz"
+    ]
+}

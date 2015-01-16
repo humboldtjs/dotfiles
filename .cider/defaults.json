@@ -1,0 +1,47 @@
+{
+    "NSGlobalDomain": {
+        "NSDocumentSaveNewDocumentsToCloud": 0,
+        "WebKitDeveloperExtras": 1
+    },
+    "com.apple.Finder": {
+        "FXPreferredViewStyle": "clmv"
+    },
+    "com.apple.NetworkBrowser": {
+        "BrowseAllInterfaces": 1
+    },
+    "com.apple.Safari": {
+        "IncludeDevelopMenu": 1,
+        "IncludeInternalDebugMenu": 0,
+        "WebKitDeveloperExtrasEnabledPreferenceKey": 1,
+        "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled": 1
+    },
+    "com.apple.dashboard": {
+        "mcx-disabled": 1
+    },
+    "com.apple.desktopservices": {
+        "DSDontWriteNetworkStores": 1
+    },
+    "com.apple.dock": {
+        "autohide": 1,
+        "dashboard-in-overlay": 1,
+        "largesize": 72,
+        "magnification": true,
+        "show-process-indicators": 1,
+        "tilesize": 48
+    },
+    "com.apple.finder": {
+        "ShowCustomIconsForRemovableVolumes": 1,
+        "ShowExternalHardDrivesOnDesktop": 1,
+        "ShowHardDrivesOnDesktop": 1,
+        "ShowMountedServersOnDesktop": 0,
+        "ShowRemovableMediaOnDesktop": 1
+    },
+    "com.apple.screencapture": {
+        "type": "png"
+    },
+    "com.apple.universalaccess": {
+        "HIDScrollZoomModifierMask": 262144,
+        "closeViewScrollWheelToggle": 1,
+        "closeViewZoomFollowsFocus": 1
+    }
+}
