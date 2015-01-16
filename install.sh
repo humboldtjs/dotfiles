@@ -24,5 +24,5 @@ if ! [ -f "~/dotfiles" ]; then
 fi
 
 if ! [ -f "~/.cider" ]; then
-	ln -s "~/dotfiles/.cider" "~/.cider"
+	ln -s ~/dotfiles/.cider ~/.cider
 fi
