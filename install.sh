@@ -22,10 +22,19 @@ if ! [ -d ~/dotfiles ]; then
 	cd ~
 	
 	git clone https://github.com/humboldtjs/dotfiles.git
+else
+	cd ~/dotfiles
+	
+	git pull
 fi
 
 if ! [ -d ~/.cider ]; then
 	ln -s ~/dotfiles/.cider ~/.cider
 fi
 
+if ! [ -d ~/.config ]; then
+	ln -s ~/dotfiles/.config ~/.config
+fi
+
+echo "Cider restore..."
 cider restore
