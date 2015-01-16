@@ -6,6 +6,7 @@
         "caskroom/cask/brew-cask",
         "faac",
         "ffmpeg",
+        "fish",
         "git",
         "git-flow",
         "icdiff",
