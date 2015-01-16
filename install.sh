@@ -18,11 +18,11 @@ if ! [ -f "/usr/local/bin/cider" ]; then
 	sudo pip install cider
 fi
 
-if ! [ -f "~/dotfiles" ]; then
+if ! [ -f ~/dotfiles ]; then
 	cd ~
 	git clone https://github.com/humboldtjs/dotfiles.git
 fi
 
-if ! [ -f "~/.cider" ]; then
+if ! [ -f ~/.cider ]; then
 	ln -s ~/dotfiles/.cider ~/.cider
 fi
