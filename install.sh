@@ -6,6 +6,12 @@ if ! [ -f "/usr/local/bin/brew" ]; then
 	brew doctor
 fi
 
+if ! [ -f "/usr/local/bin/pip" ]; then
+	echo "Installing pip..."
+	
+	sudo easy_install pip
+fi
+
 if ! [ -f "/usr/local/bin/cider" ]; then
 	echo "Installing cider..."
 	
