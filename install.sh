@@ -24,6 +24,6 @@ if ! [ -d ~/dotfiles ]; then
 	git clone https://github.com/humboldtjs/dotfiles.git
 fi
 
-if ! [ -f ~/.cider ]; then
+if ! [ -d ~/.cider ]; then
 	ln -s ~/dotfiles/.cider ~/.cider
 fi
