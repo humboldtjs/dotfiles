@@ -18,7 +18,7 @@ if ! [ -f "/usr/local/bin/cider" ]; then
 	sudo pip install cider
 fi
 
-if ! [ -f ~/dotfiles ]; then
+if ! [ -d ~/dotfiles ]; then
 	cd ~
 	git clone https://github.com/humboldtjs/dotfiles.git
 fi
