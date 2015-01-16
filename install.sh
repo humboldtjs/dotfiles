@@ -39,7 +39,7 @@ fi
 echo "Cider restore..."
 cider restore
 
-if [ "$SHELL" = "/usr/local/bin/fish" ]; then
+if ! [ "$SHELL" = "/usr/local/bin/fish" ]; then
 	echo "Setting shell to fish..."
 	chsh -s /usr/local/bin/fish
 fi
