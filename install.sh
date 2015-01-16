@@ -20,6 +20,7 @@ fi
 
 if ! [ -d ~/dotfiles ]; then
 	cd ~
+	
 	git clone https://github.com/humboldtjs/dotfiles.git
 fi
 
