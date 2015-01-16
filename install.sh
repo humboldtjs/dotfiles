@@ -15,7 +15,7 @@ fi
 if ! [ -f "/usr/local/bin/cider" ]; then
 	echo "Installing cider..."
 	
-	pip install -U cider
+	sudo pip install -U cider
 fi
 
 if ! [ -f "~/dotfiles" ]; then
