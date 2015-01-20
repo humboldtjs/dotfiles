@@ -43,5 +43,9 @@
         "HIDScrollZoomModifierMask": 262144,
         "closeViewScrollWheelToggle": 1,
         "closeViewZoomFollowsFocus": 1
+    },
+    "com.apple.terminal": {
+        "Default Window Settings": "Pro",
+        "Startup Window Settings": "Pro"
     }
 }
