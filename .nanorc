@@ -215,55 +215,55 @@ set whitespace ". "
 
 
 ## Nanorc files
-include "/usr/share/nano/nanorc.nanorc"
+include "~/dotfiles/nano/nanorc.nanorc"
 
 ## C/C++
-include "/usr/share/nano/c.nanorc"
+include "~/dotfiles/nano/c.nanorc"
 
 ## HTML
-# include "/usr/share/nano/html.nanorc"
+# include "~/dotfiles/nano/html.nanorc"
 
 ## TeX
-include "/usr/share/nano/tex.nanorc"
+include "~/dotfiles/nano/tex.nanorc"
 
 ## Quoted emails (under e.g. mutt)
-include "/usr/share/nano/mutt.nanorc"
+include "~/dotfiles/nano/mutt.nanorc"
 
 ## Patch files
-include "/usr/share/nano/patch.nanorc"
+include "~/dotfiles/nano/patch.nanorc"
 
 ## Manpages
-include "/usr/share/nano/man.nanorc"
+include "~/dotfiles/nano/man.nanorc"
 
 ## Groff
-include "/usr/share/nano/groff.nanorc"
+include "~/dotfiles/nano/groff.nanorc"
 
 ## Perl
-include "/usr/share/nano/perl.nanorc"
+include "~/dotfiles/nano/perl.nanorc"
 
 ## Python
-include "/usr/share/nano/python.nanorc"
+include "~/dotfiles/nano/python.nanorc"
 
 ## Ruby
-include "/usr/share/nano/ruby.nanorc"
+include "~/dotfiles/nano/ruby.nanorc"
 
 ## Java
-include "/usr/share/nano/java.nanorc"
+include "~/dotfiles/nano/java.nanorc"
 
 ## Assembler
-include "/usr/share/nano/asm.nanorc"
+include "~/dotfiles/nano/asm.nanorc"
 
 ## Bourne shell scripts
-include "/usr/share/nano/sh.nanorc"
+include "~/dotfiles/nano/sh.nanorc"
 
 ## Javascript
-include "/usr/share/nano/js.nanorc"
+include "~/dotfiles/nano/js.nanorc"
 
 ## Markdown
-include "/usr/share/nano/markdown.nanorc"
+include "~/dotfiles/nano/markdown.nanorc"
 
 ## PHP
-include "/usr/share/nano/php.nanorc"
+include "~/dotfiles/nano/php.nanorc"
 
 ##############################################################################
 #

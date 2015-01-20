@@ -44,6 +44,10 @@ if ! [ -f ~/.gitignore ]; then
 	ln -s ~/dotfiles/.gitignore ~/.gitignore
 fi
 
+if ! [ -f ~/.nanorc ]; then
+	ln -s ~/dotfiles/.nanorc ~/.nanorc
+fi
+
 echo "Cider restore..."
 cider restore
 
