@@ -10,7 +10,7 @@ else
 	echo " homebrew... OK"
 fi
 
-if ! [ -f "/usr/local/bin/brew-cask.rb" ]; then
+if ! [ -f "/usr/local/bin/brew-cask" ]; then
 	echo " brew-cask... INSTALL"
 	brew install caskroom/cask/brew-cask
 else
@@ -31,6 +31,7 @@ else
 	echo " cider... OK"
 fi
 
+echo "UPDATE DOTFILES"
 if ! [ -d ~/dotfiles ]; then
 	cd ~
 	git clone https://github.com/humboldtjs/dotfiles.git
@@ -39,45 +40,53 @@ else
 	git pull
 fi
 
-if ! [ -d ~/.cider ]; then
-	ln -s ~/dotfiles/.cider ~/.cider
-fi
+linkDotFile()
+{
+	if ! [ -d ~/.$1 ]; then
+		if ! [ -f ~/.$1 ]; then
+			echo [ -f "~/.$1" ];
+			echo "~/.$1"
+			echo " $1... LINK"
+			ln -s ~/dotfiles/.$1 ~/.$1
+		else
+			echo " $1... OK"
+		fi
+	else
+		echo " $1... OK"
+	fi
+}
 
-if ! [ -d ~/.config ]; then
-	ln -s ~/dotfiles/.config ~/.config
-fi
+linkDotFile "cider"
+linkDotFile "config"
+linkDotFile "gitconfig"
+linkDotFile "gitignore"
+linkDotFile "nanorc"
 
-if ! [ -f ~/.gitconfig ]; then
-	ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-fi
-
-if ! [ -f ~/.gitignore ]; then
-	ln -s ~/dotfiles/.gitignore ~/.gitignore
-fi
-
-if ! [ -f ~/.nanorc ]; then
-	ln -s ~/dotfiles/.nanorc ~/.nanorc
-fi
-
-echo "Cider restore..."
+echo "CIDER RESTORE"
 cider restore
 
+echo "SETTINGS"
 if ! [ "$SHELL" = "/usr/local/bin/fish" ]; then
-	echo "Setting shell to fish..."
+	echo " fishshell... CHSH"
 
 	if [ "`grep fish /etc/shells`" = "" ]; then
 		echo /usr/local/bin/fish | sudo tee -a /etc/shells
 	fi
 
 	chsh -s /usr/local/bin/fish
+else
+	echo " fishshell... OK"
 fi
 
+echo " terminal... OK"
 osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"Pro\""
 osascript -e "tell application \"Terminal\" to set default settings to settings set \"Pro\""
 osascript -e "tell application \"Terminal\" to set startup settings to settings set \"Pro\""
 
-echo "Installing apps..."
+echo "INSTALL ADDITIONAL APPS"
+
 if ! [ -d "/Applications/TextMate.app" ]; then
+	echo " textmate... INSTALL"
 	cd ~/dotfiles
 	wget "https://api.textmate.org/downloads/release" -O TextMate.tbz
 
@@ -90,4 +99,6 @@ if ! [ -d "/Applications/TextMate.app" ]; then
 	rm -Rf tmp;
 
 	sudo cp /Applications/TextMate.app/Contents/Resources/mate /usr/local/bin/mate
+else
+	echo " textmate... OK"
 fi
