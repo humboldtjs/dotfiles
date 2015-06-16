@@ -85,20 +85,41 @@ osascript -e "tell application \"Terminal\" to set startup settings to settings 
 
 echo "INSTALL ADDITIONAL APPS"
 
-if ! [ -d "/Applications/TextMate.app" ]; then
-	echo " textmate... INSTALL"
-	cd ~/dotfiles
-	wget "https://api.textmate.org/downloads/release" -O TextMate.tbz
+cleanupInstall()
+{
+	if [ -d /opt/homebrew-cask/Caskroom/$1/latest ]; then
+		echo " $1... CLEANUP"
+		brew cask remove $1
+	fi
+}
 
-	mkdir tmp
-	tar -xjf TextMate.tbz -C tmp
-	rm TextMate.tbz
-	
-	sudo mv tmp/TextMate.app /Applications/TextMate.app
+testInstall()
+{
+	if ! [ -d "/Applications/${1}" ]; then
+		echo " $2... INSTALL"
+		brew cask install $2
+		if ! [ "$3" == "noremove" ]; then
+			LATEST="$3"
+			if [ -z "$3" ]; then
+				LATEST="latest"
+			fi
+			sudo cp -R /opt/homebrew-cask/Caskroom/$2/${LATEST}/*.app /Applications/
+			brew cask remove $2
+		fi
+	else
+		echo " $1... OK"
+	fi
+}
 
-	rm -Rf tmp;
-
-	sudo cp /Applications/TextMate.app/Contents/Resources/mate /usr/local/bin/mate
-else
-	echo " textmate... OK"
+testInstall TextMate.app textmate
+testInstall Dropbox.app dropbox
+testInstall ownCloud.app owncloud noremove
+testInstall Skype.app skype
+cleanupInstall adobe-creative-cloud
+testInstall Adobe\ Creative\ Cloud adobe-creative-cloud noremove
+if ! [ -d "/Applications/Adobe Creative Cloud" ]; then
+	open /opt/homebrew-cask/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app
 fi
+testInstall Xamarin\ Studio.app xamarin-studio 5.7.0.661-0/Applications
+testInstall VLC.app vlc 2.2.1
+testInstall Spotify.app spotify
