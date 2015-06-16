@@ -1,30 +1,41 @@
 #!/bin/sh
+
+### MAKE SURE OUR PRE-REQUISITES ARE INSTALLED
+echo "PREREQUISITES"
 if ! [ -f "/usr/local/bin/brew" ]; then
-	echo "Installing homebrew..."
-	
+	echo " homebrew... INSTALL"
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew doctor
+else
+	echo " homebrew... OK"
+fi
+
+if ! [ -f "/usr/local/bin/brew-cask.rb" ]; then
+	echo " brew-cask... INSTALL"
+	brew install caskroom/cask/brew-cask
+else
+	echo " brew-cask... OK"
 fi
 
 if ! [ -f "/usr/local/bin/pip" ]; then
-	echo "Installing pip..."
-	
+	echo " pip... INSTALL"
 	sudo easy_install pip
+else
+	echo " pip... OK"
 fi
 
 if ! [ -f "/usr/local/bin/cider" ]; then
-	echo "Installing cider..."
-	
+	echo " cider... INSTALL"
 	sudo pip install cider
+else
+	echo " cider... OK"
 fi
 
 if ! [ -d ~/dotfiles ]; then
 	cd ~
-	
 	git clone https://github.com/humboldtjs/dotfiles.git
 else
 	cd ~/dotfiles
-	
 	git pull
 fi
 
