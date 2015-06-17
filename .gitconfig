@@ -1,8 +1,8 @@
 # set your user tokens as enivornment variables, such as ~/.secrets
 # See the README for examples.
 [user]
-	name = Daniël Haveman
-	email = daniel@utalk.nl
+	name = 
+	email = 
 [github]
 	user = humboldtjs
 [color]
@@ -103,7 +103,7 @@
 [core]
   autocrlf = false
   editor = mate -w
-	excludesfile = /Users/solitude/.yadr/git/gitignore
+	excludesfile = /Users/solitude/.gitignore_global
 [advice]
   statusHints = false
 [diff]
