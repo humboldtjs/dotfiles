@@ -120,6 +120,7 @@ testInstall Adobe\ Creative\ Cloud adobe-creative-cloud noremove
 if ! [ -d "/Applications/Adobe Creative Cloud" ]; then
 	open /opt/homebrew-cask/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app
 fi
-testInstall Xamarin\ Studio.app xamarin-studio 5.7.0.661-0/Applications
+testInstall Xamarin\ Studio.app xamarin-studio 5.7.0.661-0
 testInstall VLC.app vlc 2.2.1
 testInstall Spotify.app spotify
+testInstall SourceTree.app sourcetree 2.0.5.2
