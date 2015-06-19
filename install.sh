@@ -124,3 +124,4 @@ testInstall Xamarin\ Studio.app xamarin-studio 5.7.0.661-0
 testInstall VLC.app vlc 2.2.1
 testInstall Spotify.app spotify
 testInstall SourceTree.app sourcetree 2.0.5.2
+testInstall Cyberduck.app cyberduck 4.7

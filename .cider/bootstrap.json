@@ -3,6 +3,8 @@
         "brew linkapps"
     ],
     "formulas": [
+        "ImageMagick",
+        "ant",
         "caskroom/cask/brew-cask",
         "faac",
         "ffmpeg",
@@ -17,6 +19,8 @@
         "node",
         "pup",
         "tag",
+        "tor",
+        "torsocks",
         "wget",
         "x264",
         "xvid",
