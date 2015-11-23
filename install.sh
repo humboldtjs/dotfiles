@@ -126,3 +126,8 @@ testInstall Spotify.app spotify
 testInstall SourceTree.app sourcetree 2.0.5.2
 testInstall Cyberduck.app cyberduck 4.7
 testInstall Miro\ Video\ Converter.app miro-video-converter
+
+FFMPEG=`ffmpeg 2>&1 | grep -i vpx`
+if [ -z "$FFMPEG" ]; then
+	brew reinstall ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-speex --with-theora --with-tools
+fi
