@@ -120,11 +120,11 @@ testInstall Adobe\ Creative\ Cloud adobe-creative-cloud noremove
 if ! [ -d "/Applications/Adobe Creative Cloud" ]; then
 	open /opt/homebrew-cask/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app
 fi
-testInstall Xamarin\ Studio.app xamarin-studio 5.7.0.661-0
+testInstall Xamarin\ Studio.app xamarin-studio 5.10.0.871-0
 testInstall VLC.app vlc 2.2.1
 testInstall Spotify.app spotify
-testInstall SourceTree.app sourcetree 2.0.5.2
-testInstall Cyberduck.app cyberduck 4.7
+testInstall SourceTree.app sourcetree 2.0.5.7
+testInstall Cyberduck.app cyberduck 4.7.3
 testInstall Miro\ Video\ Converter.app miro-video-converter
 
 FFMPEG=`ffmpeg 2>&1 | grep -i vpx`
