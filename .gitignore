@@ -34,3 +34,9 @@ Session.vim
 
 .config/fish/fishd*
 .config/fish/fish_history
+.config/xbuild
+.config/fish
+.config/mkvtoolnix
+.config/NuGet
+.config/configstore
+.config/stetic
