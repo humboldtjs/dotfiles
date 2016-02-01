@@ -126,6 +126,7 @@ testInstall Spotify.app spotify
 testInstall SourceTree.app sourcetree 2.0.5.7
 testInstall Cyberduck.app cyberduck 4.7.3
 testInstall Miro\ Video\ Converter.app miro-video-converter
+testInstall Firefox.app firefox 42.0
 
 FFMPEG=`ffmpeg 2>&1 | grep -i vpx`
 if [ -z "$FFMPEG" ]; then
