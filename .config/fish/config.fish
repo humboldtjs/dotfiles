@@ -1,1 +1,1 @@
-set PATH /usr/local/sbin $PATH
+set PATH /usr/local/sbin ~/dotfiles/extracommands $PATH

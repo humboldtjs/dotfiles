@@ -48,4 +48,8 @@
         "Default Window Settings": "Pro",
         "Startup Window Settings": "Pro"
     }
+	"com.microsoft.OneDrive-mac": {
+		"DefaultToBusinessFRE": true,
+		"EnableAddAccounts": true
+	}
 }

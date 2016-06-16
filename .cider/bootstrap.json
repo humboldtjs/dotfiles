@@ -4,6 +4,7 @@
     ],
     "formulas": [
         "ImageMagick",
+        "android-platform-tools",
         "ant",
         "caskroom/cask/brew-cask",
         "cloc",
@@ -13,6 +14,7 @@
         "fish",
         "git",
         "git-flow",
+        "gpp",
         "icdiff",
         "icu4c",
         "jq",
