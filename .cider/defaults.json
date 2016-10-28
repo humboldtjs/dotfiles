@@ -47,9 +47,12 @@
     "com.apple.terminal": {
         "Default Window Settings": "Pro",
         "Startup Window Settings": "Pro"
-    }
+    },
 	"com.microsoft.OneDrive-mac": {
 		"DefaultToBusinessFRE": true,
 		"EnableAddAccounts": true
+	},
+	"com.apple.TextEdit": {
+		"RichText": 0
 	}
 }
