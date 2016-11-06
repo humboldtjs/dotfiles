@@ -132,3 +132,5 @@ FFMPEG=`ffmpeg 2>&1 | grep -i vpx`
 if [ -z "$FFMPEG" ]; then
 	brew reinstall ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-speex --with-theora --with-tools
 fi
+
+sudo npm install -g typescript@next
