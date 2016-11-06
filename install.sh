@@ -111,7 +111,7 @@ testInstall()
 	fi
 }
 
-testInstall TextMate.app textmate
+brew cask install textmate # no longer need to do testInstall because cask installs textmate in the correct place already
 testInstall Dropbox.app dropbox
 testInstall ownCloud.app owncloud noremove
 testInstall Skype.app skype
