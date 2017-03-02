@@ -134,3 +134,8 @@ if [ -z "$FFMPEG" ]; then
 fi
 
 sudo npm install -g typescript@next
+sudo npm install -g imageoptim-cli
+
+cd extracommands
+wget "https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" -O adb.zip
+unzip adb.zip

@@ -40,3 +40,5 @@ Session.vim
 .config/NuGet
 .config/configstore
 .config/stetic
+extracommands/platform-tools
+adb.zip

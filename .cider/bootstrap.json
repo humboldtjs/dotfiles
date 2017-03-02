@@ -4,6 +4,7 @@
     ],
     "formulas": [
         "ImageMagick",
+        "R",
         "android-platform-tools",
         "ant",
         "caskroom/cask/brew-cask",
@@ -32,6 +33,7 @@
         "wget",
         "x264",
         "xvid",
-        "xz"
+        "xz",
+        "youtube-dl"
     ]
 }

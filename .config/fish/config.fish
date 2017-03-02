@@ -1,1 +1,1 @@
-set PATH /usr/local/sbin ~/dotfiles/extracommands $PATH
+set PATH /usr/local/sbin ~/dotfiles/extracommands ~/dotfiles/extracommands/platform-tools $PATH
