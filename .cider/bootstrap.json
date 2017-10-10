@@ -5,9 +5,9 @@
     "formulas": [
         "ImageMagick",
         "R",
-        "android-platform-tools",
+        "caskroom/cask/android-platform-tools",
+        "caskroom/cask/java",
         "ant",
-        "caskroom/cask/brew-cask",
         "cloc",
         "faac",
         "fdupes",
@@ -25,7 +25,6 @@
         "mono",
         "nmap",
         "node",
-        "pebble/pebble-sdk/pebble-sdk",
         "pup",
         "tag",
         "tor",
@@ -34,6 +33,14 @@
         "x264",
         "xvid",
         "xz",
-        "youtube-dl"
+        "youtube-dl",
+		"caskroom/cask/textmate",
+		"caskroom/cask/dropbox",
+		"caskroom/cask/skype",
+		"caskroom/cask/xamarin-studio",
+		"caskroom/cask/vlc",
+		"caskroom/cask/cyberduck",
+		"caskroom/cask/firefox",
+		"caskroom/cask/google-chrome"
     ]
 }
