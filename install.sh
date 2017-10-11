@@ -126,9 +126,43 @@ if [ -z "$FFMPEG" ]; then
 	brew reinstall ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-speex --with-theora --with-tools
 fi
 
-sudo npm install -g typescript@next
+sudo npm install -g typescript
 sudo npm install -g imageoptim-cli
 
-cd extracommands
-wget "https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" -O adb.zip
-unzip adb.zip
+if ! [ -d "extracommands/platform-tools" ]; then
+	cd extracommands
+	wget "https://dl.google.com/android/repository/platform-tools-latest-darwin.zip" -O adb.zip
+	unzip adb.zip
+	rm adb.zip
+	cd ..
+fi
+
+echo "MAC APP STORE INSTALLS"
+mas install 880001334  # Reeder 3
+mas install 1091189122 # Bear
+mas install 731829889  # Mindmaple Pro
+mas install 897118787  # Shazam
+mas install 411643860  # DaisyDisk
+mas install 919269455  # Stuffit Expander
+mas install 497799835  # Xcode
+
+echo "CLEANUP DOCK"
+dockutil --remove "Contacts" --no-restart
+dockutil --remove "Notes" --no-restart
+dockutil --remove "Launchpad" --no-restart
+dockutil --remove "Reminders" --no-restart
+dockutil --remove "Maps" --no-restart
+dockutil --remove "Photos" --no-restart
+dockutil --remove "Messages" --no-restart
+dockutil --remove "Facetime" --no-restart
+dockutil --remove "iBooks" --no-restart
+dockutil --remove "App Store" --no-restart
+dockutil --remove "System Preferences" --no-restart
+dockutil --add "/Applications/Reeder.app" --after "Calendar" --no-restart
+
+echo ""
+echo "If this was the first time, you ran this, make sure to restart the dock."
+echo "Use the following command:"
+echo ""
+echo "> killall dock"
+echo ""
