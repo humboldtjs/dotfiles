@@ -1,0 +1,129 @@
+#!/usr/bin/php
+<?php
+
+function readCSV($file, $headerMap)
+{
+    $f = file($file);
+    for ($i = 0; $i < sizeof($f); $i++) {
+        $f[$i] = str_replace("\\", "", $f[$i]);
+    }
+    
+    $csv = array_map('str_getcsv', $f);
+
+    $csvHeader = [];
+    for ($i = 0; $i < sizeof($csv[0]); $i++) {
+        $header = $csv[0][$i];
+        if (isset($headerMap->{$header})) {
+            $header = $headerMap->{$header};
+        } else {
+//            print "Unmapped: " . $header . "\n";
+        }
+        $finalHeader = $header;
+        $finalHeaderCount = 1;
+        while (in_array($finalHeader, $csvHeader)) {
+            $finalHeaderCount++;
+            $finalHeader = $header . "_" . $finalHeaderCount;
+        }
+
+        $csvHeader[] = $finalHeader;
+    }
+    array_shift($csv); # remove column header
+
+    array_walk($csv, function(&$a) use ($csvHeader) {
+        @$a = array_combine($csvHeader, $a);
+    });
+
+    return $csv;
+}
+
+if ($argc < 3) {
+    print "\n";
+    print "usage:\n YnabConverter <infile> <outfile>\n";
+    print "\n";
+    exit();
+}
+
+$csv = readCSV($argv[1], (object)Array());
+
+$newCSV = [];
+$newCSV[] = ["Date", "Payee", "Memo", "Amount"];
+$first = true;
+
+for ($i = 0; $i < sizeof($csv); $i++) {
+    $line = $csv[$i];
+    if ($line) {
+        if ($line["IBAN/BBAN"]) {
+            if ($first) { print "Processing RaboBank CSV export...\n"; $first = false; }
+            if ($line["IBAN/BBAN"] == "NL24RABO0114518017") {
+                $newLine = [];
+    
+                $date = explode("-", $line["Datum"]);
+
+                //Date
+                $newLine[0] = $date[1]."/".$date[2]."/".$date[0];
+                if ($newLine[0] == "//") {
+                    print_r($line);
+                }
+    
+                //Payee
+                $newLine[1] = $line["Naam tegenpartij"];
+    
+                //Memo
+                $newLine[2] = $line["Omschrijving-1"].$line["Omschrijving-2"].$line["Omschrijving-3"];
+    
+                //Amount
+                $newLine[3] = str_replace(",", ".", $line["Bedrag"]);
+    
+                $newCSV[] = $newLine;
+            }
+        } else if ($line["Credit/Debit"]) {
+            if ($first) { print "Processing Neteller CSV export...\n"; $first = false; }
+
+            $newLine = [];
+
+            $date = explode("-", explode(" / ", $line["Date"])[0]);
+
+            //Date
+            $newLine[0] = $date[1]."/".$date[0]."/".$date[2];
+            if ($newLine[0] == "//") {
+                print_r($line);
+            }
+    
+            $name = $line["Description"];
+            $memo = "";
+            if (strpos($name, " - ") !== false) {
+                $parts = explode(" - ", $name);
+                $name = array_shift($parts);
+                $memo = implode(" - ", $parts);
+            } else
+            if (strpos($name, "~~") !== false) {
+                $parts = explode("~~", $name);
+                $name = array_shift($parts);
+                $memo = implode("~~", $parts);
+            }
+
+            //Payee
+            $newLine[1] = $name;
+
+            //Memo
+            $newLine[2] = $memo;
+
+            //Amount
+            $newLine[3] = $line["Credit/Debit"];
+
+            $newCSV[] = $newLine;
+        } else {
+            if ($first) { print "Unknown file format...\n"; $first = false; }
+        }
+    }
+}
+
+$fp = fopen($argv[2], "w");
+
+foreach ($newCSV as $csvLine) {
+    fputcsv($fp, $csvLine);
+}
+
+fclose($fp);
+
+?>
