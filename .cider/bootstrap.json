@@ -3,10 +3,11 @@
         "brew linkapps"
     ],
     "casks": [
-        "dotnet",
+        "docker",
         "dotnet-sdk",
         "gltfquicklook",
-        "java"
+        "java",
+        "mtmr"
     ],
     "formulas": [
         "ImageMagick",
@@ -33,7 +34,9 @@
         "diff-so-fancy",
         "dockutil",
         "entr",
+        "espeak",
         "exa",
+        "f3",
         "faac",
         "fd",
         "fdupes",
@@ -42,7 +45,9 @@
         "ghostscript",
         "git",
         "git-flow",
+        "git-lfs",
         "gpp",
+        "hexyl",
         "htop",
         "https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb",
         "icdiff",
@@ -63,12 +68,14 @@
         "pup",
         "python",
         "rust",
+        "sox",
         "tag",
         "telnet",
         "tldr",
         "tmux",
         "tor",
         "torsocks",
+        "unar",
         "wget",
         "x264",
         "xvid",
