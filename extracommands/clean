@@ -1,0 +1,16 @@
+#!/bin/sh
+
+pushd . >/dev/null
+cd ~
+HOME=`pwd`
+#echo ${HOME}
+popd >/dev/null
+DOCS="${HOME}/Documents"
+BACKUP="${DOCS}/Unsorted"
+YEAR=`date +%Y`
+DATE=`date +%m-%d`
+FOLDER="${BACKUP}/${YEAR}/${DATE}"
+
+mkdir -p "${FOLDER}"
+mv -nv ~/Desktop/* "${FOLDER}"
+open "${FOLDER}"
