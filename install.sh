@@ -90,7 +90,7 @@ linkDotFile "gitignore"
 linkDotFile "nanorc"
 
 echo "UPDATING CASKROOM"
-brew tap caskroom/cask
+brew tap homebrew/cask
 
 echo "CIDER RESTORE"
 cider restore
@@ -144,7 +144,7 @@ mas install 731829889  # Mindmaple Pro
 mas install 897118787  # Shazam
 mas install 411643860  # DaisyDisk
 mas install 919269455  # Stuffit Expander
-mas install 497799835  # Xcode
+#mas install 497799835  # Xcode
 
 echo "CLEANUP DOCK"
 dockutil --remove "Contacts" --no-restart
