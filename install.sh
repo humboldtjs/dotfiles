@@ -46,6 +46,7 @@ fi
 
 if ! [ -f "/usr/local/bin/pip" ]; then
 	echo " pip... INSTALL"
+	brew install python3
 	sudo easy_install pip
 else
 	echo " pip... OK"
@@ -53,7 +54,7 @@ fi
 
 if ! [ -f "/usr/local/bin/cider" ]; then
 	echo " cider... INSTALL"
-	sudo pip install cider
+	sudo pip3 install cider
 else
 	echo " cider... OK"
 fi
